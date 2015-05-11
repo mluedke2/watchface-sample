@@ -2,4 +2,5 @@
 <resources>
   <color name="watch_face_time">#FFFFFF</color>
   <color name="watch_face_fill">#00796B</color>
+  <color name="watch_face_date">#009688</color>
 </resources>
