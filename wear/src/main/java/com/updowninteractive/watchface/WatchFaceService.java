@@ -1,5 +1,7 @@
 package com.updowninteractive.watchface;
 
+import android.graphics.Canvas;
+import android.graphics.Rect;
 import android.support.wearable.watchface.CanvasWatchFaceService;
 import android.support.wearable.watchface.WatchFaceStyle;
 import android.view.SurfaceHolder;
@@ -20,6 +22,17 @@ public class WatchFaceService extends CanvasWatchFaceService {
           .setBackgroundVisibility(WatchFaceStyle.BACKGROUND_VISIBILITY_INTERRUPTIVE)
           .setShowSystemUiTime(false)
           .build());
+    }
+
+    @Override
+    public void onTimeTick() {
+      super.onTimeTick();
+      invalidate();
+    }
+
+    @Override
+    public void onDraw(Canvas canvas, Rect bounds) {
+
     }
   }
 }
