@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <dimen name="time_size">46</dimen>
+  <dimen name="time_size">46sp</dimen>
 </resources>

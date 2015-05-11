@@ -14,6 +14,9 @@ public class WatchFaceService extends CanvasWatchFaceService {
   }
 
   private class Engine extends CanvasWatchFaceService.Engine {
+
+    private WatchFace watchFace;
+
     @Override
     public void onCreate(SurfaceHolder holder) {
       setWatchFaceStyle(new WatchFaceStyle.Builder(WatchFaceService.this)
@@ -22,6 +25,8 @@ public class WatchFaceService extends CanvasWatchFaceService {
           .setBackgroundVisibility(WatchFaceStyle.BACKGROUND_VISIBILITY_INTERRUPTIVE)
           .setShowSystemUiTime(false)
           .build());
+
+      watchFace = WatchFace.newInstance(new WatchFaceService());
     }
 
     @Override
@@ -32,7 +37,7 @@ public class WatchFaceService extends CanvasWatchFaceService {
 
     @Override
     public void onDraw(Canvas canvas, Rect bounds) {
-
+      watchFace.draw(canvas, bounds);
     }
   }
 }
