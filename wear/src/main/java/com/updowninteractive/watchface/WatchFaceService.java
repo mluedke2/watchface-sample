@@ -26,7 +26,7 @@ public class WatchFaceService extends CanvasWatchFaceService {
           .setShowSystemUiTime(false)
           .build());
 
-      watchFace = WatchFace.newInstance(new WatchFaceService());
+      watchFace = WatchFace.newInstance(WatchFaceService.this);
     }
 
     @Override
